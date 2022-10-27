@@ -68,7 +68,7 @@ a.passouligne:visited{
     flex-direction: row;
 }
 .gpslogo{
-    border: 1px solid #0065FC;
+    border: 0px solid #0065FC;
     border-radius: 15px 0px 0px 15px;
     padding-right: 18px;
     padding-left: 18px;
@@ -80,4 +80,20 @@ a.passouligne:visited{
     font-size: 18px;
     font-weight: 700;
     width: 200px;
+    border: 0px solid;
+}
+.formulairerecherche:focus{
+    border: none;
+    outline: none;
+}
+.boutonrecherche{
+    height: 55px;
+    width: 132px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    background: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
 }
