@@ -26,6 +26,10 @@ h2{
 }
 h3{
     font-weight: 700;
+    font-size: 17px;
+}
+h4{
+    font-weight: 700;
     font-size: 16px;
 }
 
@@ -51,6 +55,7 @@ a.passouligne:link{
 }
 a.passouligne:visited{
     color: inherit;
+    font-weight: inherit;
 }
 .navigation2:hover{
     color: #0065FC;
@@ -67,22 +72,23 @@ a.passouligne:visited{
     flex-direction: row;
 }
 .gpslogo{
-    border: 0px solid #0065FC;
+    border: 1px solid #D9D9D9;
     border-radius: 15px 0px 0px 15px;
+    background-color: #D9D9D9;
     padding-right: 18px;
     padding-left: 18px;
     padding-top: 16px;
     padding-bottom: 15px;
 }
 .formulairerecherche{
-    height: 49px;
+    height: 55px;
     font-size: 18px;
     font-weight: 700;
     width: 200px;
-    border: 0px solid;
+    border: 1px solid #D9D9D9;
+    float: left;
 }
 .formulairerecherche:focus{
-    border: none;
     outline: none;
 }
 .boutonrecherche{
@@ -95,4 +101,39 @@ a.passouligne:visited{
     background: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
+}
+
+/* ------ Les différents filtres ------*/
+.filtres{
+    display: flex;
+    flex-direction: row;
+    margin-right: 2em;
+    align-items: center;
+}
+.logosfiltres{
+    margin-right: 10px;
+    color: #0065FC;
+    font-size: x-large;
+}
+.economique, .familial, .romantique, .animauxautorises{
+    border: solid 2px #D9D9D9;
+    border-radius: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.economique:hover, .familial:hover, .romantique:hover, .animauxautorises:hover{
+    background-color: #DEEBFF;
+}
+.informationsnombre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.infoslogo{
+    color: #0065FC;
+    border: solid 1px #D9D9D9;
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
+    margin-right: 11px;
+    font-size: small;
 }
