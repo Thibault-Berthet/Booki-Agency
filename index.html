@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +20,7 @@
             </div>
 
             <nav>
-                <ul class="sanspuces navigation1">
+                <ul class="sanspuces navigation1 paddingpuces">
                     <li class="navigation2"><a href="#hebergements" class="passouligne">Hébergements</li></a>
                     <li class="navigation2"><a href="#activites" class="passouligne">Activités</li></a>
                 </ul>
@@ -28,7 +29,7 @@
         </header>
 
         <main class="container">
-        <section>
+        <section class="entetedepage">
             <h1>Trouvez votre hébergements pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p><br />
 
@@ -37,20 +38,23 @@
                 <form method="post" action="recherche.php">
                     <input type="search" name="recherche" id="recherche" class="formulairerecherche" placeholder="Marseille">
                     <input type="submit" name="boutonrecherche" value="Rechercher" class="boutonrecherche">
+                    <button type="submit" name="boutonloupe" title="Recherch" class="loupederecherche">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </form>
             </div>
 
             <div class="alignementligne">
                 <h2 class="motfiltres">Filtres</h2>
-                
-                <div class="filtres"><i class="fa-solid fa-money-bill-wave logosfiltres"></i><h3>Économique</h3></div>
+                <div class="moteticonefiltres">
+                    <div class="filtres"><i class="fa-solid fa-money-bill-wave logosfiltres"></i><span class="policesfiltres">Économique</span></div>
 
-                <div class="filtres"><i class="fa-solid fa-person logosfiltres"></i><h3>Familial</h3></div>
+                    <div class="filtres"><i class="fa-solid fa-person logosfiltres"></i><span class="policesfiltres">Familial</span></div>
 
-                <div class="filtres"><i class="fa-solid fa-heart logosfiltres"></i><h3>Romantique</h3></div>
+                    <div class="filtres"><i class="fa-solid fa-heart logosfiltres"></i><span class="policesfiltres">Romantique</span></div>
 
-                <div class="filtres"><i class="fa-solid fa-dog logosfiltres"></i><h3>Animaux autorisés</h3></div>
-
+                    <div class="filtres"><i class="fa-solid fa-dog logosfiltres"></i><span class="policesfiltres">Animaux autorisés</span></div>
+                </div>
             </div>
 
             <div class="informationsnombre">
@@ -253,7 +257,7 @@
         </aside>
         </div>
 
-        <section>
+        <section class="activitescontour">
             <h2 id="activites">Activités à Marseille</h2>
 
             <div class="activitesaligne">

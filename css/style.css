@@ -6,12 +6,16 @@
 
 .container{
     max-width: 1400px;
-    width: 98%;
+    width: 95%;
     margin: 0 auto;
 }
 
 /* ------ Mise en forme général ------*/
 
+html, body{
+    margin: 0;
+    padding: 0;
+}
 body{
     font-family: 'Raleway', Impact, "Arial Black", Arial, Verdana, sans-serif;
     background-color: rgba(255, 255, 255, 1);
@@ -20,16 +24,15 @@ body{
 }
 .herbergpopulaires{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: wrap row;
     justify-content: space-between;
 }
 .hebergtaille{
     max-width: 65%;
 }
-.poputaille{
+/*.poputaille{
     max-width: 35%;
-}
+}*/
 .ecartementfooter{
     margin-bottom: 10px;
 }
@@ -66,10 +69,10 @@ h3{
 }
 .navigation1{
     display: flex;
-    flex-flow: wrap row;
+    flex-direction: row;
 }
 .navigation2{
-    margin-right: 50px;
+    margin-right: 20px;
     padding-top: 46px;
 }
 a.passouligne{
@@ -128,6 +131,9 @@ a.passouligne:visited{
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
 }
+.loupederecherche{
+    display: none;
+}
 
 /* ------ Les différents filtres ------*/
 
@@ -139,8 +145,13 @@ a.passouligne:visited{
 .motfiltres{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-right: 2em;
     margin-bottom: 2em;
+}
+.moteticonefiltres{
+    display: flex;
+    flex-flow: row wrap;
 }
 .filtres{
     display: flex;
@@ -158,8 +169,15 @@ a.passouligne:visited{
     color: #0065FC;
     font-size: x-large;
 }
+.policesfiltres{
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
 .filtres:hover{
     background-color: #DEEBFF;
+    transition: 0.5s;
 }
 .informationsnombre{
     display: flex;
@@ -187,12 +205,11 @@ a.passouligne:visited{
     padding-bottom: 14px;
     max-width: 100%;
     margin-top: 10px;
-    margin-right: 20px;
 }
 .cartealigne{
     display: flex;
     flex-flow: wrap row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .card01{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -200,7 +217,6 @@ a.passouligne:visited{
     background-color: white;
     border-radius: 15px;
     padding: 5px;
-    margin-right: 5px;
     margin-bottom: 30px;
     width: 236px;
     display: flex;
@@ -251,7 +267,6 @@ a.passouligne:visited{
     border-radius: 15px;
     background-color: #D9D9D9;
     padding-left: 37px;
-    margin-left: 20px;
     padding-top: 22px;
     padding-right: 40px;
     margin-bottom: 1px;
@@ -300,6 +315,7 @@ a.passouligne:visited{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .nomdulieu2{
     margin-top: 20px;
@@ -332,10 +348,12 @@ a.passouligne:visited{
 .footer3colonnes{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #D9D9D9;
     padding-top: 30px;
     padding-bottom: 15px;
+    padding-left: 10%;
+    padding-right: 20%;
     height: 180px;
 }
 .apropos{
@@ -352,4 +370,168 @@ a.passouligne:visited{
 }
 .paddingpuces{
     padding-left: 0px;
+}
+
+/* ------ Les Media queries pour tablette------*/
+
+@media screen and (max-width: 992px)
+{
+    .hebergtaille{
+        max-width: 100%;
+    }
+
+    .cartecolonne{
+        flex-flow: wrap row;
+        justify-content: space-between;
+    }
+
+    .card02{
+        width: 252px;
+    }
+
+    .formeimage02{
+        width: 106px;
+    }
+
+    .herbergpopulaires{
+        flex-flow: wrap column;
+    }
+
+    .card03{
+        width: 182px;
+    }
+
+    .formeimage03{
+        height: 211px;
+    }
+}
+
+
+/* ------ Les Media queries pour mobile------*/
+
+@media screen and (max-width: 768px)
+{
+    .container{
+        width: 100%;
+    }
+    .entetedepage{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logoheader{
+        margin-top: 20px;
+    }
+    .navigation2{
+        padding-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #D9D9D9;
+        margin-right: 0px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .navigation2:hover{
+        color: #0065FC;
+        font-weight: 500;
+        border-bottom: 3px solid #0065FC;
+        border-top: none;
+    }
+    .barrederecherche{
+        justify-content: center;
+    }
+    .boutonrecherche{
+        display: none;
+    }
+    .loupederecherche{
+        display: inline;
+        height: 52px;
+        width: 49px;
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 18px;
+        color: white;
+        background: #0065FC;
+        border: 1px solid #0065FC;
+        border-radius: 0px 15px 15px 0px;
+    }
+    .policesfiltres{
+        font-size: 11px;
+    }
+    .logosfiltres{
+        font-size: large;
+    }
+    .filtres{
+        margin-right: 0px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        width: 140px;
+    }
+    .moteticonefiltres{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .herbergpopulaires{
+        flex-flow: wrap column-reverse;
+    }
+    .cartecolonne{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .lespluspopulairescontour{
+        border-radius: 0px;
+        background-color: #D9D9D9;
+        padding-left: 10px;
+        margin-left: 0px;
+        padding-top: 20px;
+        padding-right: 20px;
+        margin-bottom: 1px;
+        max-width: 100%;
+        margin-top: 0px;
+    }
+    .card02{
+        width: 100%;
+    }
+    .hebergementcontour{
+        border: 0px solid #D9D9D9;
+        border-radius: 15px;
+        background-color: white;
+        padding-left: 0px;
+        margin-left: 20px;
+        padding-right: 0px;
+        margin-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        max-width: 100%;
+        margin-top: 0px;
+    }
+    .card01{
+        width: 100%; /* Mettre 320 px pour prendre toute la largeur*/
+    }
+    .afficherplus{
+        display: none;
+    }
+    .activitescontour{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .card03{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .formeimage03{
+        width: 100%; /* Mettre 320 px pour prendre toute la largeur*/
+        height: 134px;
+        object-fit: cover;
+    }
+    .footer3colonnes{
+        flex-direction: column;
+        height: 100%;
+    }
+
 }
