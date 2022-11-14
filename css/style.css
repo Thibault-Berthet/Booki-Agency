@@ -12,7 +12,7 @@
 
 /* ------ Mise en forme général ------*/
 
-html, body{
+html, body, ul, p{
     margin: 0;
     padding: 0;
 }
@@ -28,11 +28,11 @@ body{
     justify-content: space-between;
 }
 .hebergtaille{
-    max-width: 65%;
+    max-width: 68%;
 }
-/*.poputaille{
-    max-width: 35%;
-}*/
+.poputaille{
+    max-width: 29%;
+}
 .ecartementfooter{
     margin-bottom: 10px;
 }
@@ -42,6 +42,9 @@ body{
 h1{
     font-weight: 700;
     font-size: 22px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 h2{
     font-weight: 700;
@@ -60,7 +63,7 @@ h3{
 
 /* ------ Header et menu de navigation ------*/
 
-.header{
+.header01{
     display: flex;
     justify-content: space-between;
 }
@@ -72,8 +75,7 @@ h3{
     flex-direction: row;
 }
 .navigation2{
-    margin-right: 20px;
-    padding-top: 46px;
+    padding: 46px 25px 0px 25px;
 }
 a.passouligne{
     text-decoration: none;
@@ -90,6 +92,7 @@ a.passouligne:visited{
 }
 .logoheader{
     margin-top: 44px;
+    margin-bottom: 53px;
 }
 
 /* ------ Barre de recherche ------*/
@@ -114,7 +117,6 @@ a.passouligne:visited{
     font-weight: 700;
     width: 200px;
     border: 1px solid #D9D9D9;
-    float: left;
     padding-left: 1em;
 }
 .formulairerecherche:focus{
@@ -130,6 +132,7 @@ a.passouligne:visited{
     background: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
+    position: absolute;
 }
 .loupederecherche{
     display: none;
@@ -146,8 +149,9 @@ a.passouligne:visited{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 22px;
 }
 .moteticonefiltres{
     display: flex;
@@ -162,7 +166,6 @@ a.passouligne:visited{
     border-radius: 35px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-bottom: 2em;
 }
 .logosfiltres{
     margin-right: 10px;
@@ -188,23 +191,22 @@ a.passouligne:visited{
     color: #0065FC;
     border: solid 1px #D9D9D9;
     border-radius: 50%;
-    padding: 10px 15px 10px 15px;
+    padding: 6px 10px 6px 10px;
     margin-right: 11px;
-    font-size: small;
+    font-size: 12px;
 }
-
+.cinqcentslogements{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 /* ------ La partie Hébergements ------*/
 
 .hebergementcontour{
     border: 1px solid #D9D9D9;
     border-radius: 15px;
     background-color: #D9D9D9;
-    padding-left: 40px;
-    padding-right: 20px;
-    padding-top: 22px;
-    padding-bottom: 14px;
+    padding: 22px 40px 46px 40px;
     max-width: 100%;
-    margin-top: 10px;
 }
 .cartealigne{
     display: flex;
@@ -220,9 +222,7 @@ a.passouligne:visited{
     margin-bottom: 30px;
     width: 236px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+    flex-flow: wrap row;
 }
 .formeimage01{
     border-radius: 15px 15px 0px 0px;
@@ -257,7 +257,6 @@ a.passouligne:visited{
     font-size: 18px;
     font-weight: 700;
     margin-top: 10px;
-    margin-bottom: 46px;
 }
 
 /* ------ La partie les plus populaires ------*/
@@ -266,12 +265,8 @@ a.passouligne:visited{
     border: 1px solid #D9D9D9;
     border-radius: 15px;
     background-color: #D9D9D9;
-    padding-left: 37px;
-    padding-top: 22px;
-    padding-right: 40px;
-    margin-bottom: 1px;
+    padding : 22px 40px 15px 40px;
     max-width: 100%;
-    margin-top: 10px;
 }
 .cartecolonne{
     display: flex;
@@ -288,8 +283,9 @@ a.passouligne:visited{
     background-color: white;
     border-radius: 15px;
     padding: 5px;
-    margin-bottom: 34px;
-    width: 343px;
+    margin-bottom: 24px;
+    width: 100%;
+    min-width: 100px;
     display: flex;
     flex-direction: row;
 }
@@ -350,11 +346,9 @@ a.passouligne:visited{
     flex-direction: row;
     justify-content: space-between;
     background-color: #D9D9D9;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    padding-left: 10%;
-    padding-right: 20%;
     height: 180px;
+    padding: 30px 20% 15px 10%;
+    margin-top: 20px;
 }
 .apropos{
     display: flex;
@@ -376,10 +370,21 @@ a.passouligne:visited{
 
 @media screen and (max-width: 992px)
 {
+    .motfiltres{
+        padding: 0px 0px 15px 0px;
+    }
     .hebergtaille{
         max-width: 100%;
     }
-
+    .hebergementcontour{
+        margin-bottom: 45px;
+    }
+    .poputaille{
+        max-width: 100%;
+    }
+    .lespluspopulairescontour{
+        margin-bottom: 45px;
+    }
     .cartecolonne{
         flex-flow: wrap row;
         justify-content: space-between;
@@ -418,13 +423,16 @@ a.passouligne:visited{
         padding-left: 20px;
         padding-right: 20px;
     }
-    .header{
+    .header01{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .logoheader{
-        margin-top: 20px;
+        margin: 20px 0px 25px 0px;
+    }
+    nav{
+        width: 100%;
     }
     .navigation2{
         padding-top: 20px;
@@ -433,6 +441,7 @@ a.passouligne:visited{
         margin-right: 0px;
         padding-right: 50px;
         padding-left: 50px;
+        width: 50%;
     }
     .navigation2:hover{
         color: #0065FC;
@@ -440,11 +449,18 @@ a.passouligne:visited{
         border-bottom: 3px solid #0065FC;
         border-top: none;
     }
+    h1{
+        margin: 25px 0px 15px 0px;
+    }
     .barrederecherche{
-        justify-content: center;
+        justify-content: flex-start;
+        margin-top: 20px;
     }
     .boutonrecherche{
         display: none;
+    }
+    .formulairerecherche{
+        width: 80%;
     }
     .loupederecherche{
         display: inline;
@@ -457,6 +473,7 @@ a.passouligne:visited{
         background: #0065FC;
         border: 1px solid #0065FC;
         border-radius: 0px 15px 15px 0px;
+        position: absolute;
     }
     .policesfiltres{
         font-size: 11px;
@@ -476,6 +493,9 @@ a.passouligne:visited{
         flex-flow: row wrap;
         justify-content: space-between;
     }
+    .informationsnombre{
+        align-items: baseline;
+    }
     .herbergpopulaires{
         flex-flow: wrap column-reverse;
     }
@@ -493,9 +513,11 @@ a.passouligne:visited{
         margin-bottom: 1px;
         max-width: 100%;
         margin-top: 0px;
+        padding-bottom: 35px;
     }
     .card02{
         width: 100%;
+        margin-bottom: 11px;
     }
     .hebergementcontour{
         border: 0px solid #D9D9D9;
@@ -511,7 +533,7 @@ a.passouligne:visited{
         margin-top: 0px;
     }
     .card01{
-        width: 100%; /* Mettre 320 px pour prendre toute la largeur*/
+        width: 100%;
     }
     .afficherplus{
         display: none;
@@ -525,13 +547,17 @@ a.passouligne:visited{
         width: 100%;
     }
     .formeimage03{
-        width: 100%; /* Mettre 320 px pour prendre toute la largeur*/
+        width: 100%;
         height: 134px;
         object-fit: cover;
     }
     .footer3colonnes{
         flex-direction: column;
         height: 100%;
+        padding-bottom: 50px;
+    }
+    a.passouligne{
+        width: 100%;
     }
 
 }
