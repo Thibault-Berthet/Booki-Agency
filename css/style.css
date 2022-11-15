@@ -94,6 +94,9 @@ a.passouligne:visited{
     margin-top: 44px;
     margin-bottom: 53px;
 }
+.villeounature{
+    padding-bottom: 15px;
+}
 
 /* ------ Barre de recherche ------*/
 
@@ -213,7 +216,7 @@ a.passouligne:visited{
 }
 .card01{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3;
+    transition: 0.3s;
     background-color: white;
     border-radius: 15px;
     padding: 5px;
@@ -277,7 +280,7 @@ a.passouligne:visited{
 }
 .card02{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3;
+    transition: 0.3s;
     background-color: white;
     border-radius: 15px;
     padding: 5px;
@@ -299,6 +302,16 @@ a.passouligne:visited{
     flex-direction: column;
     justify-content: space-between;
 }
+.nomdulieupop{
+    margin-top: 3px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.prixdulieupop{
+    margin-top: 3px;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
 
 /* ------ Les activités à Marseille ------*/
 
@@ -315,7 +328,7 @@ a.passouligne:visited{
 }
 .card03{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3;
+    transition: 0.3s;
     background-color: white;
     border-radius: 15px;
     margin-bottom: 34px;
@@ -384,23 +397,24 @@ a.passouligne:visited{
         flex-flow: wrap row;
         justify-content: space-between;
     }
-
     .card02{
         width: 252px;
     }
-
+    .prixdulieupop{
+        font-size: 13px;
+    }
+    .nomdulieupop{
+        font-size: 14px;
+    }
     .formeimage02{
         width: 106px;
     }
-
     .herbergpopulaires{
         flex-flow: wrap column;
     }
-
     .card03{
         width: 182px;
     }
-
     .formeimage03{
         height: 211px;
     }
