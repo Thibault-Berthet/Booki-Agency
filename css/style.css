@@ -326,6 +326,11 @@ a.passouligne:visited{
     margin-bottom: 8px;
     font-weight: 700;
 }
+.nomdulieu2long{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
 .card03{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -414,6 +419,10 @@ a.passouligne:visited{
     }
     .card03{
         width: 182px;
+    }
+    .nomdulieu2long{
+        margin-top: 9px;
+        margin-bottom: 0px;
     }
     .formeimage03{
         height: 211px;
@@ -553,6 +562,10 @@ a.passouligne:visited{
         width: 100%;
         height: 134px;
         object-fit: cover;
+    }
+    .nomdulieu2long{
+        margin-top: 20px;
+        margin-bottom: 8px;
     }
     .footer3colonnes{
         flex-direction: column;
